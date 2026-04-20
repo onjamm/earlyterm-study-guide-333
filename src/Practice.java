@@ -48,7 +48,13 @@ public class Practice {
         return longest;
     } 
 
-
+    /**
+     * Returns the number of words that are longer than n but less than m
+     * @param words non-empty hashset of words
+     * @param n only adds if greater then n
+     * @param m only adds if less than m
+     * @return counter of longerThanAndLessThan words
+     */
     public static int longerThanAndLessThan(HashSet<String> words, int n, int m) {
         int counter = 0;
 
@@ -59,6 +65,30 @@ public class Practice {
         }        
         
         return counter;
+    }
+
+    /**
+     * Return the difference between the amount of odd numbers and even numbers
+     * (x = odd - even)
+     * @param words HashMap of words
+     * @return the difference between the amt of odd#'s and even #'s
+     */
+    public static int diffOfOddAndEven(HashMap<Integer, Integer> nums) {
+        int difference = 0;
+        int even = 0;
+        int odd = 0;
+
+        for (int num : nums.values()) {
+            if (num % 2 == 0) {
+                even += 1;
+            } else {
+                odd +=1;
+            }
+        }
+
+        difference = odd - even;
+
+        return difference;
     }
 
     // For each method you are only required to implement it for one of the data
