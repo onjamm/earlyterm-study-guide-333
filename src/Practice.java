@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -23,6 +25,23 @@ public class Practice {
 
 
     // TODO: Implement the other methods from the README AND tests for each one
+    
+    /**
+     * 
+     * @param words a non-empty arraylist of strings
+     * @return the longest word in the array list
+     */
+    public static String longestWord(ArrayList<String> words) {
+        String longest = "";
+
+        for (String word : words) {
+            if(word.length() > longest.length()) {
+                longest = word;
+            }
+        }
+
+        return longest;
+    } 
 
     // For each method you are only required to implement it for one of the data
     // structures. But use a different data structure for each method. For example,
