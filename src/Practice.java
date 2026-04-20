@@ -49,7 +49,7 @@ public class Practice {
     } 
 
 
-    public static int longerThanAndLessThan(HashSet<String> words, char n, char m) {
+    public static int longerThanAndLessThan(HashSet<String> words, int n, int m) {
         int counter = 0;
 
         for (String word : words) {

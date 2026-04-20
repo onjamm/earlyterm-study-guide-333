@@ -54,6 +54,25 @@ public class PracticeTest {
 
     }
 
+    @Test 
+    void longerThanAndLessThanTest() {
+        
+        //Arrange 
+        HashSet<String> set = new HashSet<>();
+        set.add("Drew");
+        set.add("Hoover");
+        set.add("I");
+        set.add("Leo");
+
+        //Act
+        int actual = Practice.longerThanAndLessThan(set, 2, 6);
+
+        //Assert
+        //Should print 3
+        assertEquals(3, actual);
+
+    }
+
     // TODO: Make tests for each problem you solve
     
 }
