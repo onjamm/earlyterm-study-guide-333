@@ -45,7 +45,7 @@ public class PracticeTest {
         arr.add("Rick");
 
         //Act
-        String actual = Practice.longestWord(arr);
+        String actual = Practice.longestWord(arr, 's');
 
         //Assert 
         //Longest word is Sagitarius it should print that

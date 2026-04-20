@@ -26,22 +26,30 @@ public class Practice {
 
     // TODO: Implement the other methods from the README AND tests for each one
     
-    /**
-     * 
-     * @param words a non-empty arraylist of strings
-     * @return the longest word in the array list
-     */
-    public static String longestWord(ArrayList<String> words) {
+   /**
+    * Returns the longest word that starts with a character c
+    * @param words non-empty array list of words
+    * @param c 
+    * @return longest word that starts with c
+    */
+    public static String longestWord(ArrayList<String> words, char c) {
         String longest = "";
 
         for (String word : words) {
-            if(word.length() > longest.length()) {
-                longest = word;
+            char firstLetter = word.charAt(0);
+            if (firstLetter == c) {
+                if(word.length() > longest.length()) {
+                    longest = word;
+                }
             }
+            
         }
 
         return longest;
     } 
+
+
+    public static 
 
     // For each method you are only required to implement it for one of the data
     // structures. But use a different data structure for each method. For example,
