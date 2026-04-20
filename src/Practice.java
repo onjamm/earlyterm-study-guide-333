@@ -49,7 +49,17 @@ public class Practice {
     } 
 
 
-    public static 
+    public static int longerThanAndLessThan(HashSet<String> words, char n, char m) {
+        int counter = 0;
+
+        for (String word : words) {
+            if (word.length() > n && word.length() < m) {
+                counter++;
+            }
+        }        
+        
+        return counter;
+    }
 
     // For each method you are only required to implement it for one of the data
     // structures. But use a different data structure for each method. For example,
