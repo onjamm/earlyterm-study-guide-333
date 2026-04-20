@@ -9,7 +9,7 @@ public class Practice {
      */
     public static int maxDiff(int[] nums) {
         // TODO: implement this
-        int min = 0;
+        int min = nums[0];
         int max = nums[0];
         int difference = 0;
 
@@ -34,14 +34,14 @@ public class Practice {
     * @param c 
     * @return longest word that starts with c
     */
-    public static String longestWord(ArrayList<String> words, char c) {
+    public static String longestWordStartingWithC(ArrayList<String> words, char c) {
         String longest = "";
 
         for (String word : words) {
             char firstLetter = word.charAt(0);
             if (firstLetter == c) {
                 if(word.length() > longest.length()) {
-                    longest += word;
+                    longest = word;
                 }
             }
             

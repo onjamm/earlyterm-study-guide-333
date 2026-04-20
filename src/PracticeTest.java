@@ -36,16 +36,16 @@ public class PracticeTest {
     @Test 
     void longestWordTest() {
         //Arrange
-        ArrayList<String> arr = new ArrayList<>();
-        arr.add("Bear");
-        arr.add("Grylls");
-        arr.add("Sagitarius");
-        arr.add("Lopez");
-        arr.add("Sanchez");
-        arr.add("Rick");
+        ArrayList<String> words = new ArrayList<>();
+        words.add("Bear");
+        words.add("Grylls");
+        words.add("Sagitarius");
+        words.add("Lopez");
+        words.add("Sanchez");
+        words.add("Rick");
 
         //Act
-        String actual = Practice.longestWord(arr, 's');
+        String actual = Practice.longestWordStartingWithC(words, 'S');
 
         //Assert 
         //Longest word is Sagitarius it should print that
@@ -90,6 +90,24 @@ public class PracticeTest {
         //Should print 0, because 2 odds and 2 evens (x = 2 - 2)
         assertEquals(0, actual);
 
+    }
+
+    @Test 
+    void secondLargestTest() {
+
+        //Arrange 
+        HashMap<Integer, Integer> nums = new HashMap<>();
+        nums.put(99, 0);
+        nums.put(67, 1);
+        nums.put(22, 2);
+        nums.put(43, 3);
+        nums.put(200, 4);
+
+        //Act
+        int actual = Practice.secondLargest(nums);
+
+        //Assert
+        assertEquals(99, actual);
     }
 
     // TODO: Make tests for each problem you solve
