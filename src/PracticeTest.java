@@ -2,6 +2,8 @@ import static org.junit.Assert.*;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.*;
+
 public class PracticeTest {
 
     // TODO: Make more tests for maxDiff
@@ -29,6 +31,27 @@ public class PracticeTest {
         //Assert
         //Largest: 100, Smallest, 2, Difference: 98
         assertEquals(98, actual);
+    }
+
+    @Test 
+    void longestWordTest() {
+        //Arrange
+        ArrayList<String> arr = new ArrayList<>();
+        arr.add("Bear");
+        arr.add("Grylls");
+        arr.add("Sagitarius");
+        arr.add("Lopez");
+        arr.add("Sanchez");
+        arr.add("Rick");
+
+        //Act
+        String actual = Practice.longestWord(arr);
+
+        //Assert 
+        //Longest word is Sagitarius it should print that
+        assertEquals("Sagitarius", actual);
+
+
     }
 
     // TODO: Make tests for each problem you solve
