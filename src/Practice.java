@@ -11,6 +11,7 @@ public class Practice {
         // TODO: implement this
         int min = 0;
         int max = nums[0];
+        int difference = 0;
 
         for (int num : nums) {
 
@@ -20,7 +21,8 @@ public class Practice {
                 min = num;
             }
         }
-        return max - min;
+        difference = max - min;
+        return difference;
     }
 
 
@@ -39,7 +41,7 @@ public class Practice {
             char firstLetter = word.charAt(0);
             if (firstLetter == c) {
                 if(word.length() > longest.length()) {
-                    longest = word;
+                    longest += word;
                 }
             }
             
@@ -89,6 +91,26 @@ public class Practice {
         difference = odd - even;
 
         return difference;
+    }
+
+    /**
+     * Returns secondLargest number
+     * @param nums non-empty HashMap of integers
+     * @return the secondLargest number in the HashMap of integer keys and values
+     */
+    public static int secondLargest(HashMap<Integer, Integer> nums) {
+        int max = 0;
+        int secondLargest = 0;
+        
+        for (int num : nums.keySet()) {
+            if (num > secondLargest && num < max) {
+                secondLargest = max;
+            } else if (num > max) {
+                max = num;
+            }
+        }
+
+        return secondLargest;
     }
 
     // For each method you are only required to implement it for one of the data

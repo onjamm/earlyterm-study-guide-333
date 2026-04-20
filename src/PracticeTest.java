@@ -68,8 +68,8 @@ public class PracticeTest {
         int actual = Practice.longerThanAndLessThan(set, 2, 6);
 
         //Assert
-        //Should print 3
-        assertEquals(3, actual);
+        //Should print 2 (Drew, Leo)
+        assertEquals(2, actual);
 
     }
 
@@ -89,6 +89,7 @@ public class PracticeTest {
         //Assert
         //Should print 0, because 2 odds and 2 evens (x = 2 - 2)
         assertEquals(0, actual);
+
     }
 
     // TODO: Make tests for each problem you solve
