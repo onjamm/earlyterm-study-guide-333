@@ -73,6 +73,24 @@ public class PracticeTest {
 
     }
 
+    @Test
+    void diffOfOddAndEvenTest() {
+
+        //Arrange
+        HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(0, 1);
+        map.put(1, 2);
+        map.put(2, 3);
+        map.put(3, 4);
+
+        //Act
+        int actual = Practice.diffOfOddAndEven(map);
+
+        //Assert
+        //Should print 0, because 2 odds and 2 evens (x = 2 - 2)
+        assertEquals(0, actual);
+    }
+
     // TODO: Make tests for each problem you solve
     
 }
